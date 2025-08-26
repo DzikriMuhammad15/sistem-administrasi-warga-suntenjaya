@@ -59,7 +59,7 @@ export function Header() {
                 />
                 {/* Logo 2 */}
                 <Image
-                  src="/logo_sadira.png"
+                  src="/Logo_sadira.png"
                   alt="Logo Desa 2"
                   width={40}
                   height={40}
