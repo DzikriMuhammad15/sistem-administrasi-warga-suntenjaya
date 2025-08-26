@@ -93,7 +93,7 @@ export function HeroSection() {
           className={`transition-all duration-1000 ${isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-10"}`}
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text">Selamat Datang di</h1>
-          <h2 className="text-4xl md:text-6xl font-bold mb-4 text-white">Desa Suntenjaya</h2>
+          <h2 className="text-4xl md:text-6xl font-bold mb-4 text-white">Desa Wisata Suntenjaya</h2>
           <p className="text-xl md:text-2xl mb-8 text-green-100 font-light">
             Kecamatan Lembang, Kabupaten Bandung Barat
           </p>
@@ -108,14 +108,6 @@ export function HeroSection() {
               className="bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Jelajahi Desa
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-green-800 font-semibold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 bg-transparent"
-              onClick={() => document.querySelector("#wisata")?.scrollIntoView({ behavior: "smooth" })}
-            >
-              Destinasi Wisata
             </Button>
           </div>
         </div>

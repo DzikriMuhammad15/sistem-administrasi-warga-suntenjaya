@@ -4,7 +4,8 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { useAuth } from "@/components/auth-provider"
 import { AdminLogin } from "@/components/admin-login"
-import { Home, Menu, X, Settings, LogOut } from "lucide-react"
+import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -45,9 +46,25 @@ export function Header() {
       >
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
+            {/* Logo + Nama Desa */}
             <div className="flex items-center space-x-3 animate-slide-in-left">
-              <div className="p-2 bg-white/10 rounded-lg">
-                <Home className="h-8 w-8 text-white" />
+              <div className="flex items-center sm:gap-2 md:gap-6 bg-white/10 rounded-lg p-2">
+                {/* Logo 1 */}
+                <Image
+                  src="/Logo_Kabupaten_Bandung_Barat.png"
+                  alt="Logo Desa 1"
+                  width={40}
+                  height={40}
+                  className="w-8 h-8 md:w-10 md:h-10 object-contain"
+                />
+                {/* Logo 2 */}
+                <Image
+                  src="/logo_sadira.png"
+                  alt="Logo Desa 2"
+                  width={40}
+                  height={40}
+                  className="w-8 h-8 md:w-10 md:h-10 object-contain"
+                />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-white">Desa Suntenjaya</h1>
@@ -76,7 +93,7 @@ export function Header() {
                 variant="ghost"
                 size="sm"
                 className="text-white hover:bg-white/10"
-                onClick={() => window.location.href = "/login"}
+                onClick={() => (window.location.href = "/login")}
               >
                 Admin Login
               </Button>
@@ -109,7 +126,6 @@ export function Header() {
                   </button>
                 ))}
                 <div className="pt-3 border-t border-green-700">
-                  
                   <Button
                     variant="ghost"
                     size="sm"
@@ -121,7 +137,6 @@ export function Header() {
                   >
                     Admin Login
                   </Button>
-                  
                 </div>
               </nav>
             </div>
